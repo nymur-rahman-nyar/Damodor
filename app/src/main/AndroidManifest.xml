@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Damodor">
         <activity
+            android:name=".EngineeringProductSearchPage"
+            android:exported="false" />
+        <activity
+            android:name=".GermKillerProductSearchPage"
+            android:exported="false" />
+        <activity
+            android:name=".MrMckenicProductSearchPage"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

@@ -24,6 +24,9 @@
             android:layout_marginRight="20dp"
             android:layout_marginTop="20dp"
 
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+
             >
 
             <ImageView
@@ -54,6 +57,9 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="20dp"
+
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
 
             >
 
@@ -86,6 +92,9 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="20dp"
+
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
 
             >
 
