@@ -30,6 +30,14 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        //----end of connection code
+
+
+
+
+
+
+
 
     }
 
