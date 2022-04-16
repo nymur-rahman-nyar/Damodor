@@ -10,6 +10,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //Setting the logo in the action bar programmatically
+
+        supportActionBar?.apply {
+            title = "Display Logo On ActionBar"
+            setDisplayShowHomeEnabled(true)
+            setDisplayUseLogoEnabled(true)
+            setLogo(R.drawable.ic_damodor_logo)  //here we must add the resouce directory of the logo
+        }
+
+
+
         //Creating the connection between the card view and the activities
 
         val mrMckenicCard = findViewById<CardView>(R.id.cv_mrMckenic)
@@ -30,7 +41,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        //----end of connection code
+        //----end of connection of cardviews to the activities---
 
 
 
