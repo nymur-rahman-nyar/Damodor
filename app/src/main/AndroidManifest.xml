@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Damodor">
         <activity
+            android:name=".AboutUs"
+            android:exported="false" />
+        <activity
             android:name=".EngineeringProductSearchPage"
             android:exported="false" />
         <activity
