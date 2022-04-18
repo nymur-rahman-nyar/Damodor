@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class MrMckenicProductSearchPage : AppCompatActivity() {
 
-    lateinit var adapter: MrMckenicAdapter
+    lateinit var adapter: ProductAdapter
     lateinit var recyclerView: RecyclerView
 
     private var nameList = mutableListOf<String>()
@@ -37,7 +37,7 @@ class MrMckenicProductSearchPage : AppCompatActivity() {
 
         displayNameList.addAll(nameList)
 
-        adapter = MrMckenicAdapter(displayNameList)
+        adapter = ProductAdapter(displayNameList)
         recyclerView = findViewById(R.id.rv_mrMckenicRecyclerView)
         recyclerView.adapter = adapter
 

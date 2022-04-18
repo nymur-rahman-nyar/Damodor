@@ -6,6 +6,7 @@
         <entry key="..\:/Users/Nayemur/Desktop/All practice projects/Damodor/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/Nayemur/Desktop/Damodor/app/src/main/res/drawable-anydpi/ic_search.xml" value="0.1" />
         <entry key="..\:/Users/Nayemur/Desktop/Damodor/app/src/main/res/layout/activity_about_us.xml" value="0.2604166666666667" />
+        <entry key="..\:/Users/Nayemur/Desktop/Damodor/app/src/main/res/layout/activity_engineering_product_search_page.xml" value="0.290625" />
         <entry key="..\:/Users/Nayemur/Desktop/Damodor/app/src/main/res/layout/activity_germ_killer_product_search_page.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Nayemur/Desktop/Damodor/app/src/main/res/layout/activity_main.xml" value="0.35104166666666664" />
         <entry key="..\:/Users/Nayemur/Desktop/Damodor/app/src/main/res/layout/activity_mr_mckenic_product_search_page.xml" value="0.25" />
@@ -15,6 +16,7 @@
         <entry key="..\:/Users/Nayemur/Desktop/Damodor/app/src/main/res/layout/single_productcard_layout.xml" value="0.33" />
         <entry key="..\:/Users/Nayemur/Desktop/Damodor/app/src/main/res/menu/menu.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/Nayemur/Desktop/Damodor/app/src/main/res/menu/mrmckenic_menu.xml" value="0.5" />
+        <entry key="..\:/Users/Nayemur/Desktop/Damodor/app/src/main/res/menu/search_menu.xml" value="0.25" />
       </map>
     </option>
   </component>

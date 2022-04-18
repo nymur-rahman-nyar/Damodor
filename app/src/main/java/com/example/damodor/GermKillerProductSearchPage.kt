@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class GermKillerProductSearchPage : AppCompatActivity() {
 
-    lateinit var adapter: GermKillerAdapter
+    lateinit var adapter: ProductAdapter
     lateinit var recyclerView: RecyclerView
 
     private var nameList = mutableListOf<String>()
@@ -35,7 +35,7 @@ class GermKillerProductSearchPage : AppCompatActivity() {
 
         displayNameList.addAll(nameList)
 
-        adapter = GermKillerAdapter(displayNameList)
+        adapter = ProductAdapter(displayNameList)
         recyclerView = findViewById(R.id.rv_GkGermKillerrecycler)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
