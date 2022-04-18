@@ -49,7 +49,7 @@ class MrMckenicProductSearchPage : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.mrmckenic_menu, menu)
+        menuInflater.inflate(R.menu.search_menu, menu)
         return super.onCreateOptionsMenu(menu)
     }
 }
