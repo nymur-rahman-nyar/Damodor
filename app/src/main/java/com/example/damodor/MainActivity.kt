@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
             title = "Damodor"
             setDisplayShowHomeEnabled(true)
             setDisplayUseLogoEnabled(true)
-            setLogo(R.drawable.ic_damodor_logo)  //here we must add the resouce directory of the logo
+            setLogo(R.drawable.ic_damodor_logo_white)  //here we must add the resouce directory of the logo
         }
 
         //---end of Setting the logo in the action bar programmatically---

@@ -5,8 +5,8 @@
     <!-- This is the search button for the mr.mckneic page-->
     <item
         android:title="Search Products"
-        android:id="@+id/mi_mrMckenicSearchOption"
         android:icon="@drawable/ic_search"
+        android:id="@+id/mi_mrMckenicSearchOption"
         app:showAsAction="always"
         app:actionViewClass="android.widget.SearchView"
         />
