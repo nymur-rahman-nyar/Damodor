@@ -6,7 +6,7 @@
     <item
         android:title="Search Products"
         android:icon="@drawable/ic_search"
-        android:id="@+id/mi_mrMckenicSearchOption"
+        android:id="@+id/mi_SearchOption"
         app:showAsAction="always"
         app:actionViewClass="android.widget.SearchView"
         />

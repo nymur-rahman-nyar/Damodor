@@ -3,8 +3,11 @@ package com.example.damodor
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
+import android.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import java.util.*
 
 class MrMckenicProductSearchPage : AppCompatActivity() {
 
@@ -21,7 +24,7 @@ class MrMckenicProductSearchPage : AppCompatActivity() {
         setContentView(R.layout.activity_mr_mckenic_product_search_page)
 
         //changing the title of the page
-        setTitle("Mr.Mckenic Product")
+        setTitle("Mr.Mckenic Products")
 
 
         //adding the products to the main list.
@@ -50,6 +53,45 @@ class MrMckenicProductSearchPage : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.search_menu, menu)
+        //start - search filter code
+        var items: MenuItem = menu!!.findItem(R.id.mi_SearchOption)
+        if (items != null){
+            var search = items.actionView as SearchView
+
+            search.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
+                override fun onQueryTextSubmit(p0: String?): Boolean {
+                    return true
+                }
+
+                override fun onQueryTextChange(p0: String?): Boolean {
+                    if (p0!!.isNotEmpty()){
+                        displayNameList.clear()
+                        var searchInputValue = p0.lowercase(Locale.getDefault())
+                        for (name in nameList){
+                            if (name.lowercase(Locale.getDefault()).contains(searchInputValue)){
+                                displayNameList.add(name)
+                            }
+
+                            recyclerView.adapter!!.notifyDataSetChanged()
+
+                        }
+                    }else{
+                        displayNameList.clear()
+                        displayNameList.addAll(nameList)
+
+                        recyclerView.adapter!!.notifyDataSetChanged()
+                    }
+
+                    return true
+                }
+            })
+
+        }
+
+
+        //end - search filter code
+
+
         return super.onCreateOptionsMenu(menu)
     }
 }
