@@ -54,8 +54,10 @@ class MrMckenicProductSearchPage : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.search_menu, menu)
         //start - search filter code
-        var items: MenuItem = menu!!.findItem(R.id.mi_SearchOption)
-        if (items != null){
+        var items: MenuItem = menu!!.findItem(R.id.mi_SearchOption) //finding the menu item
+
+
+        if (items != null){ // null checking the value of the search view
             var search = items.actionView as SearchView
 
             search.setOnQueryTextListener(object: SearchView.OnQueryTextListener{

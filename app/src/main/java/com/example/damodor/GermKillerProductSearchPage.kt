@@ -3,8 +3,11 @@ package com.example.damodor
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
+import android.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import java.util.*
 
 class GermKillerProductSearchPage : AppCompatActivity() {
 
@@ -44,6 +47,44 @@ class GermKillerProductSearchPage : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.search_menu, menu)
+
+        var items: MenuItem = menu!!.findItem(R.id.mi_SearchOption)
+        if(items != null){
+            var menuItemSearchView = items.actionView as SearchView
+            menuItemSearchView.setOnQueryTextListener(object: SearchView.OnQueryTextListener{
+                override fun onQueryTextSubmit(textField: String?): Boolean {
+                    return true // when changes are made (live)
+                }
+
+                override fun onQueryTextChange(textField: String?): Boolean { // When the changes have been made totally
+                    if(textField!!.isNotEmpty()){
+                        displayNameList.clear() //Clearing the display list
+                        var searchInput = textField.lowercase(Locale.getDefault()) // taking the input of the user and turning it into a variable
+
+                        for(name in nameList){
+                            if (name.lowercase(Locale.getDefault()).contains(searchInput)){
+                                displayNameList.add(name)
+                            }
+
+                            recyclerView.adapter!!.notifyDataSetChanged()
+                        }
+
+                    }else{
+
+                        displayNameList.clear()
+                        displayNameList.addAll(nameList)
+
+                        recyclerView.adapter!!.notifyDataSetChanged()
+
+
+                    }
+
+                    return true
+                }
+            })
+        }
+
+
         return super.onCreateOptionsMenu(menu)
     }
 
