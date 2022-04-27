@@ -14,7 +14,6 @@
         app:cardCornerRadius="30dp"
         app:cardElevation="5dp"
         android:foreground="?android:attr/selectableItemBackground"
-        android:clickable="true"
 
         >
 

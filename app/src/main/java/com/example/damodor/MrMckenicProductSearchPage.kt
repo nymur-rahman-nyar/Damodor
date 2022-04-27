@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.SearchView
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import java.util.*
@@ -47,8 +48,27 @@ class MrMckenicProductSearchPage : AppCompatActivity() {
         //this code below is very important which i forgot last time
         recyclerView.layoutManager = LinearLayoutManager(this)
 
+        var clickedIndexDisplayList = 0
+        adapter.customClickListener(object: ProductAdapter.CustomClickInterface{
+            override fun itemClicked(position: Int) {
+                clickedIndexDisplayList = position
+                var elementName = findItemName(clickedIndexDisplayList,displayNameList)
+
+                if (elementName == nameList[0]){
+                    Toast.makeText(this@MrMckenicProductSearchPage, "You clicked on $elementName", Toast.LENGTH_SHORT).show()
+                }
+
+            }
+        })
 
 
+
+    }
+
+    fun findItemName(displayIndex: Int, displayList: MutableList<String>):String{
+        var elementName = displayList[displayIndex]
+
+        return elementName
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

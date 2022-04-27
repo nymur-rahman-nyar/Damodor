@@ -9,8 +9,30 @@ import androidx.recyclerview.widget.RecyclerView
 class ProductAdapter(
     var nameList: MutableList<String>
 ):RecyclerView.Adapter<ProductAdapter.ViewHolder>() {
+
+
+
+    interface CustomClickInterface{
+        fun itemClicked(position: Int)
+    }
+
+    private lateinit var clickListener: CustomClickInterface
+
+    fun customClickListener(x: CustomClickInterface){
+        clickListener = x
+    }
+
+
+
     inner class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
         val itemName = itemView.findViewById<TextView>(R.id.tv_productName)
+        init {
+            itemView.setOnClickListener {
+                clickListener.itemClicked(adapterPosition)
+            }
+        }
+
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
