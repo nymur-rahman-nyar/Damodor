@@ -1,5 +1,6 @@
 package com.example.damodor
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -54,8 +55,27 @@ class MrMckenicProductSearchPage : AppCompatActivity() {
                 clickedIndexDisplayList = position
                 var elementName = findItemName(clickedIndexDisplayList,displayNameList)
 
+                //From here we are adding the condition of the click listener
+
                 if (elementName == nameList[0]){
-                    Toast.makeText(this@MrMckenicProductSearchPage, "You clicked on $elementName", Toast.LENGTH_SHORT).show()
+
+                    val intent = Intent(this@MrMckenicProductSearchPage,ProductDescriptionPage::class.java)
+
+                    //change the value below
+                    val image:Int = R.drawable.illustrate_engineering
+                    val title:String = "this is the title"
+                    val description:String ="this is a Description"
+                    val catPath:String = ""
+                    val msdsPath:String =""
+
+                    //sending values to other activity
+                    intent.putExtra("EXTRA_IMAGE",image)
+                    intent.putExtra("EXTRA_TITLE",title)
+                    intent.putExtra("EXTRA_DESCRIPTION",description)
+                    intent.putExtra("EXTRA_CAT_PATH",catPath)
+                    intent.putExtra("EXTRA_MSDS_PATH",msdsPath)
+
+                    startActivity(intent)
                 }
 
             }
