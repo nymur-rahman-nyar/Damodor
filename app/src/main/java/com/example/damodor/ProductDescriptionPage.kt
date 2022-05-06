@@ -17,6 +17,8 @@ class ProductDescriptionPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_product_description_page)
 
+        setTitle("")
+
         //setting up the back button
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 

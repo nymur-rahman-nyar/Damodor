@@ -1,5 +1,6 @@
 package com.example.damodor
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -46,7 +47,56 @@ class GermKillerProductSearchPage : AppCompatActivity() {
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
 
+        var displayPosition = 0
+
+        adapter.customClickListener(object: ProductAdapter.CustomClickInterface{
+            override fun itemClicked(position: Int) {
+                displayPosition = position
+                val titleOfProduct = clickedItemName(displayPosition,displayNameList)
+                when(titleOfProduct){
+                    nameList[0] -> {
+                                val intent = Intent(this@GermKillerProductSearchPage,ProductDescriptionPage::class.java)
+
+                                //change the value below
+                                val image:Int = R.drawable.illustrate_gkgermkiller
+                                val title:String = "This is a germ killer product"
+                                val description:String ="This is a germ killer description"
+                                val catPath:String = ""
+                                val msdsPath:String =""
+
+                                //sending values to other activity
+                                intent.putExtra("EXTRA_IMAGE",image)
+                                intent.putExtra("EXTRA_TITLE",title)
+                                intent.putExtra("EXTRA_DESCRIPTION",description)
+                                intent.putExtra("EXTRA_CAT_PATH",catPath)
+                                intent.putExtra("EXTRA_MSDS_PATH",msdsPath)
+
+                                startActivity(intent)
+                    }
+                    nameList[1] -> {
+
+                    }
+
+                }
+
+
+
+
+            }
+        })
+
+
     }
+
+
+    fun clickedItemName(displayPosition: Int, displayList: MutableList<String>):String{
+        //find the item name
+        var title = displayList[displayPosition]
+
+        return title
+    }
+
+
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.search_menu, menu)

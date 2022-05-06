@@ -12,7 +12,12 @@ class CallUsPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_call_us_page)
 
+        //setting the back button
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+
+        //setting the title
+        setTitle("Contact Us")
+
 
         val button = findViewById<Button>(R.id.btn_callUs)
         button.setOnClickListener {
