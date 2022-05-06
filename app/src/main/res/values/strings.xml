@@ -5,7 +5,64 @@
     <string name="engineering_first_page">Engineering Services</string>
 
 
-    //this is the productNames
+    //GermKiller product description
+    <string name="gk_surface_wipes_description">
+        GK Surface™ is a water-based disinfectant that effectively eliminates up to 99.99999% of germs. This multi-action formula cleans and disinfects surfaces.
+        \n
+        \nKills up to 99.99999% of bacteria and viruses
+        \nFormulated for daily use
+        \nEffective against mould and mildew
+        \nLeaves an antimicrobial film on surface for up to 30 days
+        \n
+        \n
+        20 wipes per pack
+    </string>
 
+    <string name="gk_surface_liquid_description">
+        GK Surface™ is a water-based disinfectant that effectively eliminates up to 99.99999% of germs. This multi-action formula cleans and disinfects surfaces.
+        \n
+        \nKills up to 99.99999% of bacteria and viruses
+        \nFormulated for daily use
+        \nEffective against mould and mildew
+        \nLeaves an antimicrobial film on surface for up to 30 days
+        \n
+        \n
+        85ml, 500ml, 5L
+    </string>
+
+    <string name="gk_air_description">
+        GK Air™ is a water-based air disinfectant that effectively eliminates up to 99.99999% of germs. It improves air quality by destroying odour-causing bacteria, instead of masking the bad odour with fragrance. Suitable for daily indoor use.
+        \n
+        \nFreshens air in indoor environments
+        \nSafe for daily indoor use
+        \nNon-flammable
+        \nRefreshing green tea fragrance
+        \nDoes not contain propellant
+        \nSurfactant free
+        \n
+        \n
+        \n300ml, 5L Bottle
+    </string>
+    <string name="gk_concentrate_description">
+        GK Concentrate™ is a water-based disinfectant concentrate that effectively eliminates up to 99.99999% of germs. This multipurpose formula cleans, disinfects and protects, leaving a long-lasting and fragrant scent. Suitable for daily use.
+        \n
+        \nKills up to 99.99999% bacteria and viruses
+        \nLight detergent action
+        \nWorks against mould and mildew
+        \nSanitises laundry
+        \nDestroys bad odour at source
+        \nSafe for daily use
+        \nSafe for daily useSafe for daily use
+        \nCertified under “Singapore Green Label”
+        \nCertified under “Singapore Green Label”Certified under “Singapore Green Label”
+
+        \nTested effective against SARS-CoV-2 (actual COVID-19 virus).
+        \nCertified Hospital-Grade Disinfectant (AOAC efficacy evaluation requirement for hospital grade disinfectants)
+        \nSafe for daily use around humans, pets and the environment (Testing of Chemicals for Health Effects as per OECD Guidelines)
+        \nTested non-toxic and non-irritating for the skin, eyes, and mouth. Tested against skin sensitisation and irritation (Testing of Chemicals for Health Effects as per OECD Guidelines).
+        \n
+        \n500ml, 2L , 5L
+
+    </string>
 
 </resources>

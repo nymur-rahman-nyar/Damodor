@@ -30,13 +30,10 @@ class GermKillerProductSearchPage : AppCompatActivity() {
 
 
         //adding items to the name list
-        nameList.add("Gk Air 300ml")
-        nameList.add("Gk Air 5L")
-        nameList.add("GK Surface 30ml")
-        nameList.add("GK Surface 500ml")
-        nameList.add("GK Surface 5L")
-        nameList.add("Gk Concentrate 2L")
-        nameList.add("Gk Concentrate 5L")
+        nameList.add("DG8312 GK SURFACE WIPES")
+        nameList.add("DG8312 GK SURFACE")
+        nameList.add("DG8312 GK AIR")
+        nameList.add("DG8312 GK CONCENTRATE")
 
         //adding the content of the list to the display list
 
@@ -58,11 +55,11 @@ class GermKillerProductSearchPage : AppCompatActivity() {
                                 val intent = Intent(this@GermKillerProductSearchPage,ProductDescriptionPage::class.java)
 
                                 //change the value below
-                                val image:Int = R.drawable.illustrate_gkgermkiller
-                                val title:String = "This is a germ killer product"
-                                val description:String ="This is a germ killer description"
-                                val catPath:String = ""
-                                val msdsPath:String =""
+                                val image:Int = R.drawable.product_gk_img_surface_swipe
+                                val title:String = nameList[0]
+                                val description:String = getString(R.string.gk_surface_wipes_description)
+                                val catPath:String = "product_gk_cat_surface_wipes.pdf"
+                                val msdsPath:String ="product_gk_sds_surface.pdf"
 
                                 //sending values to other activity
                                 intent.putExtra("EXTRA_IMAGE",image)
@@ -74,8 +71,69 @@ class GermKillerProductSearchPage : AppCompatActivity() {
                                 startActivity(intent)
                     }
                     nameList[1] -> {
+                                val intent = Intent(this@GermKillerProductSearchPage,ProductDescriptionPage::class.java)
+
+                                //change the value below
+                                val image:Int = R.drawable.product_gk_img_surface
+                                val title:String = nameList[1]
+                                val description:String = getString(R.string.gk_surface_liquid_description)
+                                val catPath:String = "product_gk_cat_surface.pdf"
+                                val msdsPath:String ="product_gk_sds_surface.pdf"
+
+                                //sending values to other activity
+                                intent.putExtra("EXTRA_IMAGE",image)
+                                intent.putExtra("EXTRA_TITLE",title)
+                                intent.putExtra("EXTRA_DESCRIPTION",description)
+                                intent.putExtra("EXTRA_CAT_PATH",catPath)
+                                intent.putExtra("EXTRA_MSDS_PATH",msdsPath)
+
+                                startActivity(intent)
+
 
                     }
+
+                    nameList[2]-> {
+                                val intent = Intent(this@GermKillerProductSearchPage,ProductDescriptionPage::class.java)
+
+                                //change the value below
+                                val image:Int = R.drawable.product_gk_img_air
+                                val title:String = nameList[2]
+                                val description:String = getString(R.string.gk_air_description)
+                                val catPath:String = "product_gk_cat_air.pdf"
+                                val msdsPath:String ="product_gk_sds_air.pdf"
+
+                                //sending values to other activity
+                                intent.putExtra("EXTRA_IMAGE",image)
+                                intent.putExtra("EXTRA_TITLE",title)
+                                intent.putExtra("EXTRA_DESCRIPTION",description)
+                                intent.putExtra("EXTRA_CAT_PATH",catPath)
+                                intent.putExtra("EXTRA_MSDS_PATH",msdsPath)
+
+                                startActivity(intent)
+                    }
+
+
+                    nameList[3]-> {
+                        val intent = Intent(this@GermKillerProductSearchPage,ProductDescriptionPage::class.java)
+
+                        //change the value below
+                        val image:Int = R.drawable.product_gk_img_concentrate
+                        val title:String = nameList[3]
+                        val description:String = getString(R.string.gk_concentrate_description)
+                        val catPath:String = "product_gk_cat_concentrate.pdf"
+                        val msdsPath:String ="product_gk_sds_concentrate.pdf"
+
+
+                        //sending values to other activity
+                        intent.putExtra("EXTRA_IMAGE",image)
+                        intent.putExtra("EXTRA_TITLE",title)
+                        intent.putExtra("EXTRA_DESCRIPTION",description)
+                        intent.putExtra("EXTRA_CAT_PATH",catPath)
+                        intent.putExtra("EXTRA_MSDS_PATH",msdsPath)
+
+                        startActivity(intent)
+                    }
+
 
                 }
 
