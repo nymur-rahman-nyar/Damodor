@@ -68,7 +68,7 @@ class ProductDescriptionPage : AppCompatActivity() {
                 PdfViewerActivity.launchPdfFromPath(
                     context = this,
                     directoryName = "Download",
-                    pdfTitle = "Catalogue",
+                    pdfTitle = "MSDS/SDS",
                     enableDownload = true,
                     fromAssets = true,
                     path = msdsPath

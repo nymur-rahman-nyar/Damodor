@@ -30,10 +30,10 @@ class GermKillerProductSearchPage : AppCompatActivity() {
 
 
         //adding items to the name list
-        nameList.add("DG8312 GK SURFACE WIPES")
-        nameList.add("DG8312 GK SURFACE")
-        nameList.add("DG8312 GK AIR")
-        nameList.add("DG8312 GK CONCENTRATE")
+        nameList.add("GK SURFACE WIPES")
+        nameList.add("GK SURFACE")
+        nameList.add("GK AIR")
+        nameList.add("GK CONCENTRATE")
 
         //adding the content of the list to the display list
 

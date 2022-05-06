@@ -54,26 +54,9 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    //Adding the action bar menu item (outside oncreate fun)
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu, menu)
-
-        return super.onCreateOptionsMenu(menu)
-    }
-    //---end of Adding the action bar menu item (outside oncreate fun)---
 
 
-    //Connecting the menu item with the AboutUs activity
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-       when(item.itemId){
-           R.id.mi_aboutUs ->{
-               val intent = Intent(this, AboutUs::class.java)
-               startActivity(intent)
-           }
-       }
 
-        return super.onOptionsItemSelected(item)
-    }
-    //---Connecting the menu item with the AboutUs activity---
+
 
 }
