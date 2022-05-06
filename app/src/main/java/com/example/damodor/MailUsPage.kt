@@ -3,6 +3,7 @@ package com.example.damodor
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.Toast
 
@@ -12,8 +13,11 @@ class MailUsPage : AppCompatActivity() {
         setContentView(R.layout.activity_mail_us_page)
         setTitle("Contact Us")
 
+        //setting up the back button
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
-        val button = findViewById<Button>(R.id.btn_sendMail)
+
+        val button = findViewById<Button>(R.id.btn_callUs)
         button.setOnClickListener {
             val intent = Intent(Intent.ACTION_SEND)
             val recipients = arrayOf("info@damodor.com")
@@ -35,4 +39,18 @@ class MailUsPage : AppCompatActivity() {
 
 
     }
+
+    //code to end the activity after the back button is pressed.
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                //Write your logic here
+                finish()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+
 }

@@ -22,6 +22,9 @@ class GermKillerProductSearchPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_germ_killer_product_search_page)
 
+        //setting up the back button
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+
         setTitle("GK Germ Killer")
 
 

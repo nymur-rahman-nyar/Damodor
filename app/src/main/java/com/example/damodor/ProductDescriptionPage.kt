@@ -5,6 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
@@ -15,6 +16,9 @@ class ProductDescriptionPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_product_description_page)
+
+        //setting up the back button
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
         //creating default value for Image
         val defaultImage:Int = R.drawable.ic_damodor_logo
@@ -74,10 +78,8 @@ class ProductDescriptionPage : AppCompatActivity() {
 
         //setting up the call and mail floating buttons
         floatingButtonCall.setOnClickListener {
-            val callIntent: Intent = Uri.parse("tel:+8801713419767").let { number ->
-                Intent(Intent.ACTION_DIAL, number)
-            }
-            startActivity(callIntent)
+            val intent = Intent(this, CallUsPage::class.java)
+            startActivity(intent)
         }
 
         floatingButtonMail.setOnClickListener {
@@ -87,12 +89,19 @@ class ProductDescriptionPage : AppCompatActivity() {
 
 
 
-
-
-
-
-
-
-
     }
+
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                //Write your logic here
+                finish()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+
 }

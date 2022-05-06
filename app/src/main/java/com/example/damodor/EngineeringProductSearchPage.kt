@@ -21,6 +21,9 @@ class EngineeringProductSearchPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_engineering_product_search_page)
+        //setting up the back button
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+
         // chaning the title
         setTitle("Our Services")
 

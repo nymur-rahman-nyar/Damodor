@@ -8,6 +8,8 @@ class AboutUs : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_about_us)
 
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+
         setTitle("Who We Are")
 
 

@@ -25,6 +25,9 @@ class MrMckenicProductSearchPage : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mr_mckenic_product_search_page)
 
+        //setting up the back button
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+
         //changing the title of the page
         setTitle("Mr.Mckenic Products")
 
