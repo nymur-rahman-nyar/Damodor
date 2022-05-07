@@ -11,6 +11,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import com.rajat.pdfviewer.PdfViewerActivity
+import kotlin.random.Random
 
 class ProductDescriptionPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -55,7 +56,7 @@ class ProductDescriptionPage : AppCompatActivity() {
                 PdfViewerActivity.launchPdfFromPath(
                     context = this,
                     directoryName = "Download",
-                    pdfTitle = "Catalogue",
+                    pdfTitle = "CATALOGUE OF $productTitle",
                     enableDownload = true,
                     fromAssets = true,
                     path = cataloguePath
@@ -68,7 +69,7 @@ class ProductDescriptionPage : AppCompatActivity() {
                 PdfViewerActivity.launchPdfFromPath(
                     context = this,
                     directoryName = "Download",
-                    pdfTitle = "MSDS/SDS",
+                    pdfTitle = "MSDS OR SDS OF $productTitle",
                     enableDownload = true,
                     fromAssets = true,
                     path = msdsPath
