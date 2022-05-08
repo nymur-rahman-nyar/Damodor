@@ -59,7 +59,8 @@ class GermKillerProductSearchPage : AppCompatActivity() {
                                 val title:String = nameList[0]
                                 val description:String = getString(R.string.gk_surface_wipes_description)
                                 val catPath:String = "product_gk_cat_surface_wipes.pdf"
-                                val msdsPath:String ="product_gk_sds_surface.pdf"
+                                val msdsPath:String ="na"
+                                val sdsPath:String ="product_gk_sds_surface.pdf"
 
                                 //sending values to other activity
                                 intent.putExtra("EXTRA_IMAGE",image)
@@ -67,6 +68,7 @@ class GermKillerProductSearchPage : AppCompatActivity() {
                                 intent.putExtra("EXTRA_DESCRIPTION",description)
                                 intent.putExtra("EXTRA_CAT_PATH",catPath)
                                 intent.putExtra("EXTRA_MSDS_PATH",msdsPath)
+                                intent.putExtra("EXTRA_SDS_PATH",sdsPath)
 
                                 startActivity(intent)
                     }
@@ -78,7 +80,8 @@ class GermKillerProductSearchPage : AppCompatActivity() {
                                 val title:String = nameList[1]
                                 val description:String = getString(R.string.gk_surface_liquid_description)
                                 val catPath:String = "product_gk_cat_surface.pdf"
-                                val msdsPath:String ="product_gk_sds_surface.pdf"
+                                val msdsPath:String ="na"
+                                val sdsPath:String ="product_gk_sds_surface.pdf"
 
                                 //sending values to other activity
                                 intent.putExtra("EXTRA_IMAGE",image)
@@ -86,6 +89,7 @@ class GermKillerProductSearchPage : AppCompatActivity() {
                                 intent.putExtra("EXTRA_DESCRIPTION",description)
                                 intent.putExtra("EXTRA_CAT_PATH",catPath)
                                 intent.putExtra("EXTRA_MSDS_PATH",msdsPath)
+                                intent.putExtra("EXTRA_SDS_PATH",sdsPath)
 
                                 startActivity(intent)
 
@@ -100,7 +104,8 @@ class GermKillerProductSearchPage : AppCompatActivity() {
                                 val title:String = nameList[2]
                                 val description:String = getString(R.string.gk_air_description)
                                 val catPath:String = "product_gk_cat_air.pdf"
-                                val msdsPath:String ="product_gk_sds_air.pdf"
+                                val msdsPath:String ="na"
+                                val sdsPath:String ="product_gk_sds_air.pdf"
 
                                 //sending values to other activity
                                 intent.putExtra("EXTRA_IMAGE",image)
@@ -108,6 +113,7 @@ class GermKillerProductSearchPage : AppCompatActivity() {
                                 intent.putExtra("EXTRA_DESCRIPTION",description)
                                 intent.putExtra("EXTRA_CAT_PATH",catPath)
                                 intent.putExtra("EXTRA_MSDS_PATH",msdsPath)
+                                intent.putExtra("EXTRA_SDS_PATH",sdsPath)
 
                                 startActivity(intent)
                     }
@@ -121,8 +127,8 @@ class GermKillerProductSearchPage : AppCompatActivity() {
                         val title:String = nameList[3]
                         val description:String = getString(R.string.gk_concentrate_description)
                         val catPath:String = "product_gk_cat_concentrate.pdf"
-                        val msdsPath:String ="product_gk_sds_concentrate.pdf"
-
+                        val msdsPath:String ="na"
+                        val sdsPath:String ="product_gk_sds_concentrate.pdf"
 
                         //sending values to other activity
                         intent.putExtra("EXTRA_IMAGE",image)
@@ -130,6 +136,7 @@ class GermKillerProductSearchPage : AppCompatActivity() {
                         intent.putExtra("EXTRA_DESCRIPTION",description)
                         intent.putExtra("EXTRA_CAT_PATH",catPath)
                         intent.putExtra("EXTRA_MSDS_PATH",msdsPath)
+                        intent.putExtra("EXTRA_SDS_PATH",sdsPath)
 
                         startActivity(intent)
                     }

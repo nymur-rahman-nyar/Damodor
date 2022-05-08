@@ -6,6 +6,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.View
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
@@ -33,6 +34,7 @@ class ProductDescriptionPage : AppCompatActivity() {
         val productDescription = intent.getStringExtra("EXTRA_DESCRIPTION")
         val cataloguePath = intent.getStringExtra("EXTRA_CAT_PATH")
         val msdsPath = intent.getStringExtra("EXTRA_MSDS_PATH")
+        val sdsPath = intent.getStringExtra("EXTRA_SDS_PATH")
 
         //getting the views which we want to change
         var productMainImageView = findViewById<ImageView>(R.id.iv_DesPageMainProductImage)
@@ -40,6 +42,7 @@ class ProductDescriptionPage : AppCompatActivity() {
         var productDescriptionTextView = findViewById<TextView>(R.id.tv_DesPageProductDescription)
         var cardViewCatalogue = findViewById<CardView>(R.id.cv_DesPageCatalogueTrigger)
         var cardViewMsds = findViewById<CardView>(R.id.cv_DesPageMsdsTrigger)
+        var cardViewSds = findViewById<CardView>(R.id.cv_DesPageSdsTrigger)
         var floatingButtonCall = findViewById<ImageButton>(R.id.imgBtn_DesPageCallUs)
         var floatingButtonMail = findViewById<ImageButton>(R.id.imgBtn_DesPageMailUs)
 
@@ -47,6 +50,15 @@ class ProductDescriptionPage : AppCompatActivity() {
         productMainImageView.setImageResource(productImage)
         productTitleTextview.text = productTitle
         productDescriptionTextView.text = productDescription
+
+        //Setting condition of visibility of the pdf buttons,
+
+        if (msdsPath == "na"){
+            cardViewMsds.visibility = View.GONE
+        }
+        if (sdsPath == "na"){
+            cardViewSds.visibility = View.GONE
+        }
 
 
 
@@ -69,13 +81,28 @@ class ProductDescriptionPage : AppCompatActivity() {
                 PdfViewerActivity.launchPdfFromPath(
                     context = this,
                     directoryName = "Download",
-                    pdfTitle = "MSDS OR SDS OF $productTitle",
+                    pdfTitle = "MSDS OF $productTitle",
                     enableDownload = true,
                     fromAssets = true,
                     path = msdsPath
                 )
             )
         }
+
+
+        cardViewSds.setOnClickListener {
+            startActivity(
+                PdfViewerActivity.launchPdfFromPath(
+                    context = this,
+                    directoryName = "Download",
+                    pdfTitle = "SDS OF $productTitle",
+                    enableDownload = true,
+                    fromAssets = true,
+                    path = sdsPath
+                )
+            )
+        }
+
 
 
 
