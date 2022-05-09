@@ -25,7 +25,7 @@ class ProductDescriptionPage : AppCompatActivity() {
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
         //creating default value for Image
-        val defaultImage:Int = R.drawable.ic_damodor_logo
+        val defaultImage:Int = R.drawable.ic_default_image_product_photo
 
 
         //fetching data from other activity
@@ -53,6 +53,9 @@ class ProductDescriptionPage : AppCompatActivity() {
 
         //Setting condition of visibility of the pdf buttons,
 
+        if (cataloguePath == "na"){
+            cardViewCatalogue.visibility = View.GONE
+        }
         if (msdsPath == "na"){
             cardViewMsds.visibility = View.GONE
         }
