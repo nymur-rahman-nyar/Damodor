@@ -45,6 +45,8 @@ class ProductDescriptionPage : AppCompatActivity() {
         var cardViewSds = findViewById<CardView>(R.id.cv_DesPageSdsTrigger)
         var floatingButtonCall = findViewById<ImageButton>(R.id.imgBtn_DesPageCallUs)
         var floatingButtonMail = findViewById<ImageButton>(R.id.imgBtn_DesPageMailUs)
+        var textViewDownloadableTitle = findViewById<TextView>(R.id.tv_desPageDocumentDownloadTitle)
+        var textViewDownloadableNote = findViewById<TextView>(R.id.tv_desPageDocumentDownloadNote)
 
         //changing the data of the views
         productMainImageView.setImageResource(productImage)
@@ -61,6 +63,12 @@ class ProductDescriptionPage : AppCompatActivity() {
         }
         if (sdsPath == "na"){
             cardViewSds.visibility = View.GONE
+        }
+
+        if(cataloguePath =="na" && msdsPath =="na" && sdsPath =="na"){
+            textViewDownloadableTitle.visibility = View.GONE
+            textViewDownloadableNote.visibility =View.GONE
+
         }
 
 
@@ -105,6 +113,13 @@ class ProductDescriptionPage : AppCompatActivity() {
                 )
             )
         }
+
+
+        if (sdsPath=="na" && msdsPath=="na"){
+            textViewDownloadableTitle.visibility = View.GONE
+            textViewDownloadableNote.visibility = View.GONE
+        }
+
 
 
 

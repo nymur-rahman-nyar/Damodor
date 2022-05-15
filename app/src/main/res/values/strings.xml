@@ -354,28 +354,31 @@
 
     //Services Description
     
-    <string name="duct_fabrication_description">
+    <string name="service_1_duct_fabrication_description">
         The fabrication process for ducts involves precisely cutting and bending sheet metal into the desired cylindrical or rectangular shapes. Damodor Engineering Department has the most up to date equipment to complete the task in hand with utmost professionalism.
     </string>
-    <string name="duct_material_supply_description">
+    <string name="service_2_duct_material_supply_description">
         The Damodor Engineering Department can source all the required material and manpower for the ducting job at hand. The engineering team is well trained and has good understanding of the ducting work.
     </string>
-    <string name="pipeline_fabrication_description">
+    <string name="service_3_pipeline_fabrication_description">
         Cutting, beveling, and welding piping components like pipes, tees, elbows, flanges, reducers, etc are done by the Damodor Engineering department. Piping fabrication is a highly critical activity requiring high precision and involving hundreds of components and thousands of steps.
     </string>
-    <string name="all_kinds_of_insulation_supply_work_description">
+    <string name="service_4_all_kinds_of_insulation_supply_work_description">
         The Damodor Engineering Department has a good understanding of the market in Bangladesh. We can source any kind of insulation material for our clients. We can import materials from foreign countries as well.
     </string>
-    <string name="fabrication_and_installation_works_description">
+    <string name="service_5_fabrication_and_installation_works_description">
         Constructing products by combining typically standardized parts using one or more individual processes. For example, steel fabrication is the production of metal structures using a range of processes such as cutting, bending and assembling. Damodor Engineering Team consists of highly trained fabricators who are able to fabricate metals maintaining high quality.
     </string>
-    <string name="hydrant_system_fabrication_and_installation_works">
+    <string name="service_6_all_kinds_of_pipe_supply_description">
+        Damodor Engineering team is able to fabricate pipes of different materials which very high efficiency. Our team ensures the maximum heat insulation of pipes in factories and power plants.
+    </string>
+    <string name="service_7_hydrant_system_fabrication_and_installation_works">
         Damodor Engineering team is one of the leading fire hydrant system installer in Bangladesh. Our team has experience of over 7 years in installing fire hydrant systems and our engineers are accustomed to the procedure.
     </string>
-    <string name="fabrication_and_installation_material_supply_works">
+    <string name="service_8_fabrication_and_installation_material_supply_works">
         The Damodor Engineering team has a good understanding of the Bangladeshi market and can source all kind of insulation material for their fabrication need. Our fabricators are top of the line and best in the industry. We provide a complete solution for our clients. From gathering materials to installation of the insulation using fabricated support.
     </string>
-    <string name="all_kinds_of_ss_ms_gp_component_supply">
+    <string name="service_9_all_kinds_of_ss_ms_gp_component_supply">
         Damodor Engineering Department can provide you all kind of SS , MS , GP components. We ensure that the supplied components are of quality and high standard. Our team is experienced and we have filtered the best suppliers from around Bangladesh.
     </string>
 

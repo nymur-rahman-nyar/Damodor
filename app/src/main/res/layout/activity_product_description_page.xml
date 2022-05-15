@@ -50,6 +50,7 @@
                 android:textSize="19sp" />
 
             <TextView
+                android:id="@+id/tv_desPageDocumentDownloadTitle"
                 android:layout_margin="8dp"
                 android:text="Documents"
                 android:textStyle="bold"
@@ -58,6 +59,7 @@
                 android:layout_height="wrap_content"/>
 
             <TextView
+                android:id="@+id/tv_desPageDocumentDownloadNote"
                 android:textColor="#A10B0B"
                 android:text="Please check your downloads folder after downloading the documents from our app.The download is instant!"
                 android:layout_marginLeft="8dp"
