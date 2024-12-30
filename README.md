@@ -13,7 +13,6 @@ Kotlin
 ## Development Tools
 - Android Studio
 - XML for UI design
-- SQLite for offline storage
 
 ## App Size
 24 MB
